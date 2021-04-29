@@ -1,0 +1,113 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 29, 2021, 9:40:47 PM
+    Author     : User
+*/
+body{
+    height: 100%;
+    width: 100%;
+    background: #1D1B22; 
+    box-shadow: 45px 100px 90px rgba(19, 19, 19, 0.397072);
+    margin: 0;
+    display:flex;
+}
+
+.div1{
+    height:auto;
+    overflow: auto;
+    flex:1;
+}
+.div2{
+    height: auto;
+    overflow: auto;
+    flex:6;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+.div3{
+    height:auto;
+    overflow: auto;
+    flex:3;
+}
+.searchbar{
+    margin-top: 10%;
+    flex:1;
+    width:100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.folders{
+    flex: 8;
+    display: inline-block;
+    
+}
+.folder{
+    display: inline-block;
+    background: #26262E;
+    border: 0.5px solid #2A2B32;
+    border-radius: 10px;
+    height: 14%;
+    width: 27%;
+    margin: 1% 1% 1% 1%;
+        
+}
+.folder:hover{
+    background: rgba(134, 134, 138, 0.25);
+    border: 0.5px solid rgba(42, 43, 50, 0.25);
+    border-radius: 10px;
+}
+
+.b1 {
+    border-radius: 8px;
+    background-color: #26262E;
+    border:none;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.b2 {
+    border-radius: 8px;
+    background-color: #26262E;
+    border:none;
+    padding: 8px;
+    cursor: pointer;
+    margin-left: 60%;
+    width: 160px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 13px;
+    line-height: 16px;
+    color:white;
+    text-align: center;
+}
+.b1:hover, .b2:hover{
+    opacity: 0.7;
+}
+
+.p1 {
+    position: relative;
+    margin-top: 12%;
+    margin-left: 8%;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 14px;
+/* identical to box height, or 93% */
+    color: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.85;
+}
+.fix{
+    position: relative;
+    margin-top:8%;
+    margin-left: 8%;
+    width: 28px;
+    height: 26px;
+}
