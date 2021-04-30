@@ -22,12 +22,10 @@ body{
     flex:1;
 }
 .div2{
+    flex:6;
     height: auto;
     overflow: auto;
-    flex:6;
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
+    display: inline;
 }
 .div3{
     height:auto;
@@ -36,37 +34,41 @@ body{
 }
 .searchbar{
     margin-top: 10%;
-    flex:1;
+    height: auto;
     width:100%;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: 20%;
 }
 .folders{
-    flex: 8;
-    display: inline-block;
-    
+    display: block;
+    overflow: hidden;
+    height:20em;
 }
 .folder{
     display: inline-block;
     background: #26262E;
     border: 0.5px solid #2A2B32;
     border-radius: 10px;
-    height: 14%;
-    width: 27%;
+    height: 10vw;
+    width: 17vw;
     margin: 1% 1% 1% 1%;
         
 }
-.folder:hover{
+
+
+.folder:hover, .foldersAll:hover{
     background: rgba(134, 134, 138, 0.25);
     border: 0.5px solid rgba(42, 43, 50, 0.25);
     border-radius: 10px;
 }
+
 
 .b1 {
     border-radius: 8px;
     background-color: #26262E;
     border:none;
     padding: 8px;
+    margin-left: 1%;
     cursor: pointer;
 }
 
