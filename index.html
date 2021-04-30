@@ -23,12 +23,13 @@ and open the template in the editor.
                 <button class="b1"><img src="images/Folder.svg" alt="fldr"/>
                     <img src="images/Path 3 Copy.svg" alt="path"/>
                 </button>
-                <button class="b2"><img src="images/Folder.svg" alt=fldr"/>
+                <button class="b2" id="b2" onclick="showAll();">
+                    <img src="images/Folder.svg" alt="fldr"/>
                     Show All <img src="images/Path 3 Copy.svg" alt="path"/>
                 </button>
             </div>
-            <div class="folders">
-                <div class="folder" id="createNew">
+            <div class="folders" id="foldersid">
+                <div class="folder" id="createNew" onclick="createFolder();">
                     <img class="fix" src="images/Folder.svg" alt="fldr"/>
                     <p class="p1">Create New Folder</p>
                 </div>
@@ -58,11 +59,38 @@ and open the template in the editor.
                     <span class="getdata"></span>
                 </div>
             </div>
+            <div class="folders">
+                <p>ssssssss asnadbsasadsd saddsa sadadas sdasdads sada dsad
+                    asdadas sadasda dasda sda dqwdw wdwdwd dwedew ed wdeewedsd 
+                    sadasd asdsade rgt hyhyy jjj d  r tgdsf dsf sdfsd fsddfs 
+                </p>
+            </div>
         </div>
+            
         
         <!-- div with the remaining 30% for right tab -->
         <div class="div3">
             <img src="images/Body Copy 6.png" alt="bodycopy6"/>
         </div>
+        
+        <script>
+            function createFolder(){
+                document.getElementById("foldersid").innerHTML+=`<div class="folder">
+                    <img class="fix" src="images/Folder.svg" alt="fldr">
+                    <p class="p1">Root</p>
+                    <span class="getdata"></span>
+                </div>`;
+            }
+            
+            function showAll(){
+                if(document.getElementById("foldersid").style.height !== "100%"){
+                    document.getElementById("foldersid").style.height ="100%";
+                    document.getElementById("foldersid").style.overflow="auto";
+                }else{
+                    document.getElementById("foldersid").style.height="20em";
+                    document.getElementById("foldersid").style.overflow="hidden";
+                }
+            }
+        </script>
     </body>
 </html>
