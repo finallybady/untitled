@@ -114,10 +114,13 @@ and open the template in the editor.
             // folder creation
             function createFolder(){
                 var fn=document.getElementById("fname").value;
+                if(fn===''){
+                    fn="new folder";
+                }
                 document.getElementById("foldersid").innerHTML+=`<div class="folder">
                     <img class="fix" src="images/Folder.svg" alt="fldr">
                     <p class="p1">`+fn+`</p>
-                    <span class="getdata"></span>
+                    <p class="getdata"><span>&#8203;</span></p>
                 </div>`;
             }       
            
