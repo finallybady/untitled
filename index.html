@@ -23,31 +23,36 @@ and open the template in the editor.
                 <button class="b1"><img src="images/Folder.svg" alt="fldr"/>
                     <img src="images/Path 3 Copy.svg" alt="path"/>
                 </button>
+                <span class="in1">
+                    All folders
+                </span>
                 <button class="b2" id="b2" onclick="showAll();">
                     <img src="images/Folder.svg" alt="fldr"/>
-                    <p class="p11">Show All </p><img src="images/Path 3 Copy.svg" alt="path"/>
+                    Show All<img src="images/Path 3 Copy.svg" alt="path"/>
                 </button>
             </div>
+            
             
             <div class="folders" id="foldersid">
                 <div class="form-popup" id="myform">
                     <span class="close">&times;</span>
-                    <form action="index.html" class="form1">
+                    <div class="form1">
                         <label for="fname"><b>Folder name:</b></label>
                         <input type="text" id="fname" placeholder="folder name"/>
                         <button type="button" class="b3" id="cancel">
                             Cancel</button>
-                        <button type="submit" onclick="createFolder();"
+                        <button type="button" onclick="createFolder();"
                                 class="b3">Create
                         </button>
                         
-                    </form>
+                    </div>
                 </div>
-                <div class="folder" id="createNew">
+                <div class="cfolder" id="createNew">
                     <img class="fix" src="images/Folder.svg" alt="fldr"/>
                     <p class="p1">Create New Folder</p>
                     <p class="getdata"><span>&#8203;</span> </p>
                 </div>
+                <div class="nf" id="nfolders">
                 <div class="folder">
                     <img class="fix" src="images/Folder.svg" alt="fldr"/>
                     <p class="p1">Music</p>
@@ -73,6 +78,7 @@ and open the template in the editor.
                     <p class="p1">Root</p>
                     <p class="getdata">97 files</p>
                 </div>
+                </div>
             </div>
             <div class="folders">
                 <p>ssssssss asnadbsasadsd saddsa sadadas sdasdads sada dsad
@@ -94,7 +100,7 @@ and open the template in the editor.
             var modal = document.getElementById("myform");
             var btn = document.getElementById("createNew");
             var cncl = document.getElementById("cancel");
-            var span = document.getElementsByClassName("close")[0];
+            var span = document.getElementsByClassName("close");
             
             btn.onclick = function(){
                 modal.style.display="block";
@@ -106,7 +112,7 @@ and open the template in the editor.
                 modal.style.display = "none";
             }
             window.onclick= function(event){
-                if(event.target==modal){
+                if(event.target===modal){
                     modal.style.display = "none";
                 }
             }
@@ -114,14 +120,28 @@ and open the template in the editor.
             // folder creation
             function createFolder(){
                 var fn=document.getElementById("fname").value;
+                var count=0;
+                var i =0;
                 if(fn===''){
-                    fn="new folder";
+                    fn="new folder("+count+")";
+                    count++;
                 }
+                var container= document.getElementById("nfolders");
+                var div=document.createElement("DIV");
+                div.className = "folder" ;
+                div.innerHTML = `<img class="fix" src='images/Folder.svg' alt="fldr"/>
+                                    <p class="p1">`+fn+`</p>
+                                    <p class="getdata"><span>&#8203;</span></p>`;
+                //div.innerHTML = fn;
+                container.insertBefore(div, container.firstChild);
+                /*
                 document.getElementById("foldersid").innerHTML+=`<div class="folder">
                     <img class="fix" src="images/Folder.svg" alt="fldr">
                     <p class="p1">`+fn+`</p>
                     <p class="getdata"><span>&#8203;</span></p>
                 </div>`;
+                */
+                 
             }       
            
             // show all
